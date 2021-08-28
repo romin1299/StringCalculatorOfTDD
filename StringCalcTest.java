@@ -14,4 +14,9 @@ public class StringCalcTest {
         Assert.assertEquals(1, calc.Add("1"));
         Assert.assertEquals(3, calc.Add("1,2"));
     } 
+    @Test
+    public void Add_addMultipleNumbers()
+    {
+        Assert.assertEquals(10, calc.Add("1,2,3,4"));
+    }
 }
