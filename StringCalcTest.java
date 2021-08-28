@@ -12,5 +12,6 @@ public class StringCalcTest {
     {
         Assert.assertEquals(0, calc.Add(""));
         Assert.assertEquals(1, calc.Add("1"));
+        Assert.assertEquals(3, calc.Add("1,2"));
     } 
 }
