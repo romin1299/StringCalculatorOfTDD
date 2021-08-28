@@ -4,7 +4,7 @@ package calculator;
 public class StringCalculator {
     public int Add(String numbers) {
         String[] s=new String[]{};
-        s=numbers.split(",");
+        s=numbers.split(",|\n");
         
         if(numbers.isEmpty())
         {
