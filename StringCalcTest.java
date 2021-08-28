@@ -6,7 +6,6 @@ import org.junit.Test;
 
 public class StringCalcTest {
     StringCalculator calc=new StringCalculator();
-
     @Test
     public void Add_addUpToTwoNumber_SeparatedByCommas()
     {
@@ -22,6 +21,6 @@ public class StringCalcTest {
     @Test
     public void Add_addNumberWithNewLineDelimiters()
     {
-        Assert.assertEquals(6, calc.Add("1\n2,3"));
+        Assert.assertEquals(10, calc.Add("1\n2\n3,4"));
     }
 }

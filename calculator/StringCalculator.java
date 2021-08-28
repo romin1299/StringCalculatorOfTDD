@@ -3,8 +3,11 @@ package calculator;
 
 public class StringCalculator {
     public int Add(String numbers) {
+
+        final String delimiter=",|\n";
         String[] s=new String[]{};
-        s=numbers.split(",|\n");
+        s=numbers.split(delimiter);
+        
         
         if(numbers.isEmpty())
         {
