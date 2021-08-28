@@ -14,6 +14,11 @@ public class StringCalculator {
         {
             return Integer.parseInt(s[0]);
         }
-        return Integer.parseInt(s[0])+Integer.parseInt(s[1]);
+        int sum=Integer.parseInt(s[0]);
+        for(int i=1;i<s.length;i++)
+        {
+            sum+=Integer.parseInt(s[i]);
+        }
+        return sum;
     }
 }
