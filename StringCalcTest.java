@@ -11,5 +11,6 @@ public class StringCalcTest {
     public void Add_addUpToTwoNumber_SeparatedByCommas()
     {
         Assert.assertEquals(0, calc.Add(""));
+        Assert.assertEquals(1, calc.Add("1"));
     } 
 }
