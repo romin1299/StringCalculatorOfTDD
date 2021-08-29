@@ -8,7 +8,6 @@ public class StringCalculator {
         String[] s=new String[]{};
         s=numbers.split(delimiter);
         
-        
         if(numbers.isEmpty())
         {
             return 0;

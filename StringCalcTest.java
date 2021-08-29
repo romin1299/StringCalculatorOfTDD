@@ -23,4 +23,9 @@ public class StringCalcTest {
     {
         Assert.assertEquals(10, calc.Add("1\n2\n3,4"));
     }
+    @Test
+    public void Add_addNumberWithCustomeDelimiters()
+    {
+        Assert.assertEquals(3, calc.Add("//;\n1;2"));
+    }
 }
