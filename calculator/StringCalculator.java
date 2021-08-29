@@ -1,13 +1,18 @@
 package calculator;
 
-
 public class StringCalculator {
     public int Add(String numbers) {
-
-        final String delimiter=",|\n";
+ 
+        String delimiter=",|\n";
         String[] s=new String[]{};
+        if(numbers.startsWith("//"))
+        {
+            int delimiterIndex = numbers.indexOf("//") + 2;
+            delimiter = numbers.substring(delimiterIndex, delimiterIndex + 1);
+            numbers = numbers.substring(numbers.indexOf("\n") + 1);
+        }
         s=numbers.split(delimiter);
-        
+
         if(numbers.isEmpty())
         {
             return 0;
@@ -23,4 +28,5 @@ public class StringCalculator {
         }
         return sum;
     }
+    
 }
