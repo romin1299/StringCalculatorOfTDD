@@ -28,4 +28,23 @@ public class StringCalcTest {
     {
         Assert.assertEquals(3, calc.Add("//;\n1;2"));
     }
+    @Test()
+    public void Add_raiseAnExceptionOnNegativeNumber()
+    {
+        try
+        {
+            calc.Add("-1");
+        }
+        catch(RuntimeException e)
+        {
+            Assert.assertEquals("Negatives not allowed: -1 ", e.getMessage());
+        }
+       
+       
+    }
+    @Test
+    public void Add_NumbersgreterThan1000NotIncludeInSum()
+    {
+        Assert.assertEquals(1003, calc.Add("1,1000,2,3000"));
+    }
 }
